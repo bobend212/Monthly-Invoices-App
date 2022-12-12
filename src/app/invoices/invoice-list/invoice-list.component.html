@@ -1,0 +1,16 @@
+<div *ngIf="invoices.length > 0">
+    <mat-accordion multi="true">
+        <mat-expansion-panel *ngFor="let invoice of invoices">
+            <mat-expansion-panel-header>
+                {{invoice.title}}
+            </mat-expansion-panel-header>
+            <p>${{invoice.amount}}</p>
+            <mat-action-row>
+                <button mat-button>Click me</button>
+            </mat-action-row>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <hr>
+    <mat-card>total: ${{getTotal()}}</mat-card>
+</div>
+<p class="mat-body-2" *ngIf="invoices.length <= 0">empty list</p>

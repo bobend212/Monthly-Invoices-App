@@ -1,0 +1,12 @@
+<mat-card>
+    <form (submit)="addInvoice(invoiceForm)" #invoiceForm="ngForm">
+        <mat-form-field appearance="fill">
+            <input name="title" ngModel matInput type="text" placeholder="title" required />
+            <mat-error>Title is required!</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <input name="amount" ngModel matInput type="number" placeholder="amount" required />
+        </mat-form-field>
+        <button type="submit" mat-raised-button color="primary">Save Invoice</button>
+    </form>
+</mat-card>

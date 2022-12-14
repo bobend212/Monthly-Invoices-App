@@ -19,6 +19,7 @@ export class InvoiceListComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.invoicesService.getInvoices();
     this.invoiceSub = this.invoicesService
       .getInvoiceUpdateListener()
       .subscribe((data: Invoice[]) => {

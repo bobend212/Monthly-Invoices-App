@@ -22,6 +22,7 @@ export class InvoiceCreateComponent implements OnInit {
     }
 
     const invoice: Invoice = {
+      id: null,
       title: form.value.title,
       amount: form.value.amount,
     };
